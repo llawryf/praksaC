@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
   
-      fetch("http://localhost:3000/api/login", {
+      fetch("https://praksac.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

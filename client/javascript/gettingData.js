@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("https://security-app-backend.onrender.com/api/pdoaciZaPregled") 
+    fetch("https://praksac.onrender.com/api/pdoaciZaPregled") 
         .then(res => res.json())
         .then(data => {
             const table = document.querySelector("table");
