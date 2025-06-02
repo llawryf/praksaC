@@ -18,7 +18,7 @@ async function dohvatiStatistiku() {
 
     // 1. Broj testiranja
     if (vrstaApk !== "Odaberi") {
-        promises.push(fetch("http://localhost:3000/api/broj-testiranja-apk", {
+        promises.push(fetch("https://praksac.onrender.com/api/broj-testiranja-apk", {
             method: "POST",
             headers,
             body: JSON.stringify({ pocetak, kraj, vrstaApk })
@@ -26,7 +26,7 @@ async function dohvatiStatistiku() {
             rezultatMapa["broj_testiranja"] = `Broj testiranja (apk ${vrstaApk}) = ${data.rezultat}`;
         }));
     } else {
-        promises.push(fetch("http://localhost:3000/api/broj-testiranja", {
+        promises.push(fetch("https://praksac.onrender.com/api/broj-testiranja", {
             method: "POST",
             headers,
             body: JSON.stringify({ pocetak, kraj })
@@ -36,7 +36,7 @@ async function dohvatiStatistiku() {
     }
 
 
-    promises.push(fetch("http://localhost:3000/api/broj-ranjivosti",{
+    promises.push(fetch("https://praksac.onrender.com/api/broj-ranjivosti",{
         method:"POST",
         headers,
         body:JSON.stringify({pocetak,kraj})
@@ -49,7 +49,7 @@ async function dohvatiStatistiku() {
 
     // 2. Ranjivosti po ozbiljnosti
     if (ozbiljnost !== "Odaberi") {
-        promises.push(fetch("http://localhost:3000/api/ranjivosti-ozbiljnost", {
+        promises.push(fetch("https://praksac.onrender.com/api/ranjivosti-ozbiljnost", {
             method: "POST",
             headers,
             body: JSON.stringify({ pocetak, kraj, ozbiljnost })
@@ -60,7 +60,7 @@ async function dohvatiStatistiku() {
 
     // 3. Ranjivosti po kategoriji
     if (kategorija !== "Odaberi") {
-        promises.push(fetch("http://localhost:3000/api/ranjivosti-kategorija", {
+        promises.push(fetch("https://praksac.onrender.com/api/ranjivosti-kategorija", {
             method: "POST",
             headers,
             body: JSON.stringify({ pocetak, kraj, kategorija })
@@ -71,7 +71,7 @@ async function dohvatiStatistiku() {
 
     // 4. Ranjivosti po vrsti testiranja
     if (vrstaTestiranja !== "Odaberi") {
-        promises.push(fetch("http://localhost:3000/api/ranjivosti-vrsta", {
+        promises.push(fetch("https://praksac.onrender.com/api/ranjivosti-vrsta", {
             method: "POST",
             headers,
             body: JSON.stringify({ pocetak, kraj, vrstaTestiranja })
