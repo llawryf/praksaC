@@ -252,7 +252,7 @@ async function AlatiZaWordPriprema() {
     console.log("Funkcija AlatiZaWordPriprema pozvana!");
 
     // Dohvati sve alate iz baze
-    const response = await fetch("http://localhost:3000/api/alatiZaWord");
+    const response = await fetch("https://praksac.onrender.com/api/alatiZaWord");
     const sviAlatiIzBaze = await response.json(); // [{ id, naziv, opis }, ...]
             
     // Stvori mapu za lakši pristup
@@ -284,7 +284,7 @@ const alatiZaWord = await AlatiZaWordPriprema();
 console.log("Provjera alata za Word:", alatiZaWord);
 
         try {
-            const res = await fetch("http://localhost:3000/api/testiranje", {
+            const res = await fetch("https://praksac.onrender.com/api/testiranje", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
@@ -372,7 +372,7 @@ saveAs(out, "GeneriraniDokument.docx");
    //dobivanje id-eva 
 window.addEventListener("DOMContentLoaded", async() =>{
     try{
-        const res= await fetch("http://localhost:3000/api/posljednji_id");
+        const res= await fetch("https://praksac.onrender.com/api/posljednji_id");
         const data=await res.json();
 
         document.getElementById("IDTestiranja").textContent=data.sljedeciTestID;
@@ -387,7 +387,7 @@ window.addEventListener("DOMContentLoaded", async() =>{
 
 //stvaranje dugmica za alate
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("http://localhost:3000/api/alati")
+    fetch("https://praksac.onrender.com/api/alati")
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById("alatContainer");
@@ -428,7 +428,7 @@ document.getElementById("DodavanjeAlataModal").addEventListener("click", async()
         return alert("upišite sve podatke");
     }
     try{
-        const res=await fetch("http://localhost:3000/api/Novialati", {
+        const res=await fetch("https://praksac.onrender.com/api/Novialati", {
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(nazivIOpisAlata)
