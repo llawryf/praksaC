@@ -1,0 +1,167 @@
+#loginFroma{
+    border-style: solid ;
+    border-color: #F18585;
+    background-color:#F18585 ;
+  border-width: 2px;
+    border-radius: 2rem;
+    justify-self: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+#submitBtn{
+  background-color: #ea1919;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color:#ffffff;
+  font-weight: bold;
+}
+
+
+div {
+  padding-bottom: 1rem;
+}
+
+#pregledIvz {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
+}
+
+
+
+.skrozLievoGore{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 95vw;
+}
+
+.red {
+  
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 4rem; 
+  margin-left: 1rem;
+  
+}
+
+
+.stupac {
+  
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+
+.labels, .inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+
+.input{
+  border-radius: 20%;
+}
+
+
+#novoTestiranje{
+  position:absolute;
+     top:1rem;
+     right:1rem;
+
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+ 
+}
+
+th {
+  border: 1px solid #dddddd;
+  background-color: #dddddd;
+  text-align: left;
+  padding: 1rem;
+}
+
+td{
+  text-align: left;
+  padding: 1rem;  
+  border: 1px solid #dddddd;
+  border-left: none;
+
+}
+
+
+.kontejnerUdesno {
+  position: absolute;
+  top: 0;
+  left: calc(50% + 1rem); 
+  width: 45vw;   
+  padding: 1rem;
+  text-align: left; 
+  
+}
+
+
+.dugmeNadnu{
+  margin-top: 1rem;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%; /* Could be more or less, depending on screen size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+

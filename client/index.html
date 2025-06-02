@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stil/stil.css">
+    <title>Zavrsni</title>
+</head>
+<body>
+    <style>
+        body {
+      margin: 0;      
+      height: 100vh;      
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      background-color: #f0f0f0;
+      overflow: auto;
+      font-size: large;
+    }
+
+
+    </style>
+
+    <div id="loginFroma">
+        <div><h2>Prijava</h2></div>
+        
+        <div>
+            <label for="username">Korisničko ime:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        </div>
+        
+        <div>
+            <label for="password">Lozinka:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        </div>
+        
+
+        <button type="submit" id="submitBtn">Prijavi se</button>
+    </div>
+
+   
+   
+        <div id="pregledIvz" >
+           
+            <div class="skrozLievoGore">
+                <h1>Dobro došli, Admin</h1>
+                
+                  <div id="novoTestiranje">
+        <button><a href="novoTestirANJE.html">Novo</a></button>
+    </div>
+           <div class="red">
+            <label for="pocetak">Početak</label>
+            <input type="date" id="pocetak" >
+            <label for="kraj">Kraj</label>
+            <input type="date" id="kraj">
+            
+            <label for="vrstaApkStat">Vrsta aplikacije/sustava</label>
+            <select  id="vrstaApkStat">
+                <option value="Odaberi">Odaberi</option>
+                <option value="Vanjska">Vanjska</option>
+                <option value="CARNET">CARNET</option>
+            </select>
+            <button onclick="dohvatiStatistiku()" id="statistika">Statistika</button>
+           </div>
+           <div class="red" style="margin-top: 1rem;">
+            <label for="Ozbiljnost">Ozbiljnost</label>
+            <select id="Ozbiljnost">
+                <option value="Odaberi">Odaberi</option>
+                <option value="Kriticna">Kritična</option>
+                <option value="Visoka">Visoka</option>
+                <option value="Srednja">Srednja</option>
+                <option value="Niska">Niska</option>
+                <option value="Informativna">Informativna</option>
+            </select>
+            <label for="Kategorija">Kategorija</label>
+            <select  id="Kategorija">
+                <option value="Odaberi">Odaberi</option>
+                <option value="A01:2021-Broken Access Control">Broken Access Control</option>
+                <option value="A02:2021-Cryptographic Failures">Cryptographic Failures</option>
+                <option value="A03:2021-Injection">Injection</option>
+                <option value="A04:2021-Insecure Design">Insecure Design</option>
+                <option value="A05:2021-Security Misconfiguration">Security Misconfiguration</option>
+                <option value="A06:2021-Vulnerable and Outdated Components">Vulnerable and Outdated Components</option>
+                <option value="A07:2021-Identification and Authentication Failures">Identification and Authentication Failures</option>
+                <option value="A08:2021-Software and Data Integrity Failures">Software and Data Integrity Failures</option>
+                <option value="A09:2021-Security Logging and Monitoring Failures">Security Logging and Monitoring Failures</option>
+                <option value="A10:2021-Server-Side Request Forgery">Server-Side Request Forgery</option>
+            </select>
+            <label for="VrstTestiranja">Vrsta testiranja</label>
+            <select id="VrstTestiranja">
+                <option value="Odaberi">Odaberi</option>
+                <option value="Automatizirana provjera izvornog koda s pregledom ranjivosti i kategorizacijom istih ">Automatizirana provjera izvornog koda</option>
+                <option value="Ručna provjera pronađenih problema u izvornom kodu ">Ručna provjera pronađenih problema u izvornom kodu </option>
+                <option value="Penetracijsko ispitivanje ">Penetracijsko ispitivanje </option>
+                <option value="Sigurnosni pregled frontend-a ">Sigurnosni pregled frontend-a</option>
+                <option value="Sigurnosni pregled backend-a ">Sigurnosni pregled backend-a </option>
+            </select>
+           </div>
+    
+           <div class="red" style="max-height: 300px; overflow-y: auto;">
+            
+                <table style="width: 100%;">
+               <tr><th>ID</th><th>Naziv aplikacije</th><th>Vrsta aplikacije</th><th>Od</th><th>Do</th><th>URL servera</th><th>Ime i prezime</th></tr> 
+               
+            </table>
+           
+            
+           </div>
+             <div id="rezultat" style=" font-weight: bold;"></div>
+            </div>
+    
+           
+
+    
+           
+        </div>
+    
+
+   
+    
+        <script src="javascript/login.js"></script>
+        <script src="javascript/gettingData.js"></script>
+        <script src="javascript/statistika.js"></script>
+</body>
+</html>
+
+
+    
+</body>
+</html>

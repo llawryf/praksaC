@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stil/stil.css">
+    <title>Zavrsni</title>
+    
+</head>
+<body>
+    <style>
+        body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      background-color: #f0f0f0;
+      overflow: auto;
+      font-size: large;
+    }
+
+    hr{
+      height: 117vh;
+      width:1px;
+      border-width:0;
+      background-color:rgb(0, 0, 0);
+    }
+
+    </style>
+
+<a href="index.html"><i class="arrow left"></i></a> 
+
+    <div  class="skrozLievoGore" style="margin-left: 2rem;">
+        <h1>Novo testiranje</h1>
+        <div class="red" style="margin-top: 1rem;">
+            <p id="IDTestiranja"></p>
+            <div style="margin-left: 20rem;">
+                <button id="spremiBtn">SPREMI</button>
+            </div>
+            
+        </div>
+        <div class="red" style="margin-top: 1rem;">
+            <label for="NazivAPK"> Naziv aplikacije</label>
+            <input type="text" id="NazivAPK">
+            <label for="URLServera">URL servera</label>
+            <input type="text" id="URLServera">
+            
+        </div>
+        <div  style="margin-top: 1rem;">
+            <label style="font-weight: bold;">Korišteni alati</label>
+        </div>
+       <div>
+            <div id="alatContainer" class="red" style="margin-top: 1rem;"></div>
+        <button id="DodavanjeAlata" >Dodaj alat</button>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" >
+   
+    <div class="stupac" >
+        <label for="imeAlata" >Ime alata: </label>
+    <input type="text" id="imeAlata" >
+    <label for="opisAlata">Opis alata: </label>
+    <input type="text" id="opisAlata">
+    <div class="red" style="justify-self: center;">
+        <button id="DodavanjeAlataModal">Dodaj alat</button>
+    <button class="close">Zatvori</button>
+    </div>
+    
+    </div>
+    
+  </div>
+
+</div>
+       </div>
+        
+
+        
+        <div style="font-weight: bold;margin-top: 1rem;">
+            <label>Vrste testiranja</label>
+        </div>
+        <div class="stupac" >       
+            
+            <div class="red" style="margin-top: 1rem;">
+                <label for="vrstaTe1">Automatizirana provjera izvornog koda</label>        
+                <input type="checkbox" id="vrstaTe1" value="1">
+            </div>
+            <div class="red" style="margin-top: 1rem;">
+                <label for="vrstaTe2">Ručna provjera pronađenih problema u izvornom kodu </label>  
+                <input type="checkbox" id="vrstaTe2" value="1">
+            </div>
+            <div class="red" style="margin-top: 1rem;">
+                <label for="vrstaTe3">Penetracijsko ispitivanje</label>  
+            <input type="checkbox" id="vrstaTe3" value="1">
+            </div>
+            <div class="red" style="margin-top: 1rem;">
+                <label for="vrstaTe4">Sigurnosni pregled frontend-a</label>  
+            <input type="checkbox" id="vrstaTe4" value="1">
+            </div>
+            <div class="red" style="margin-top: 1rem;">
+                <label for="vrstaTe5">Sigurnosni pregled backend-a </label>  
+            <input type="checkbox" id="vrstaTe5" value="1">
+            </div>  
+            
+        </div>
+    
+        <div class="red" style="margin-top: 1rem;">
+            <label for="imeIPrezimeTestera">Ime i prezime</label>
+           <input type="text" id="imeIPrezimeTestera">
+        <label for="vrstaApkNovoTest">Vrsta aplikacije/sustava</label>
+                <select  id="vrstaApkNovoTest">
+                    <option value="Vanjska">Vanjska</option>
+                    <option value="CARNET">CARNET</option>
+                </select>
+        </div>
+        <div class="red" style="margin-top: 1rem;">
+            <label for="pocetak">Početak</label>
+            <input type="date" id="pocetak" >
+            <label for="kraj">Kraj</label>
+            <input type="date" id="kraj">
+        </div>
+        
+    
+    </div>
+
+
+
+
+
+
+<hr>  <!-- LINIJA-->
+
+
+    <div  class="kontejnerUdesno">
+        <h1>Dodaj ranjivost</h1>
+        <div class="red" style="margin-top: 1rem;gap: 5rem;">
+            <p id="IDRanjivosti"></p>       
+          
+        </div>
+        <div class="stupac" style="position: absolute; top: 10rem;right: 3rem;">
+            <p style="font-weight: bold;">Vrste testiranja</p>
+            <div >
+                <div class="red" style="margin-top: 1rem;">
+                    <label for="vrstaTest11">Automatizirana provjera izvornog koda</label>        
+                    <input type="checkbox" id="vrstaTest11" value="1">
+                </div>
+                <div class="red" style="margin-top: 1rem;">
+                    <label for="vrstaTest12">Ručna provjera pronađenih problema u izvornom kodu</label>  
+                    <input type="checkbox" id="vrstaTest12" value="1">
+                </div>
+                <div class="red" style="margin-top: 1rem;">
+                    <label for="vrstaTest13">Penetracijsko ispitivanje</label>  
+                <input type="checkbox" id="vrstaTest13" value="1">
+                </div>
+                <div class="red" style="margin-top: 1rem;">
+                    <label for="vrstaTest14">Sigurnosni pregled frontend-a</label>  
+                <input type="checkbox" id="vrstaTest14" value="1">
+                </div>
+                <div class="red" style="margin-top: 1rem;">
+                    <label for="vrstaTest15">Sigurnosni pregled backend-a </label>  
+                <input type="checkbox" id="vrstaTest15" value="1">
+                </div>  
+            </div>
+        </div>
+        
+       <div class="stupac" style="width: fit-content;">
+        <label  style="font-weight: bold;">Ozbiljnost</label>
+        <div class="red" style="margin-top: 1rem;">
+            <label for="Ozb1">Kritična</label>        
+            <input type="checkbox" id="Ozb1" value="Kritična">
+        </div>
+        <div class="red" style="margin-top: 1rem;">
+            <label for="Ozb2">Visoka</label>  
+            <input type="checkbox" id="Ozb2" value="Visoka">
+        </div>
+        <div class="red" style="margin-top: 1rem;">
+            <label for="Ozb3">Srednja</label>  
+        <input type="checkbox" id="Ozb3" value="Srednja">
+        </div>
+        <div class="red" style="margin-top: 1rem;">
+            <label for="Ozb4">Niska</label>  
+        <input type="checkbox" id="Ozb4" value="Niska">
+        </div>
+        <div class="red" style="margin-top: 1rem;">
+            <label for="Ozb5">Informativna</label>  
+        <input type="checkbox" id="Ozb5" value="Informativna">
+        </div>  
+       </div>
+      
+        <p style="font-weight: bold;">Naziv ranjivosti</p>
+        <input type="text" id="NazivRanjivosti">     
+        <p style="font-weight: bold;">Ocjena ozbiljnosti</p>
+        <input type="number" id="ocjneaOzb"  min="0" max="10" step="0.1">
+        <div style="position: absolute; top: 30rem;right: 20rem;">
+            <p style="font-weight: bold;">Score CVSS</p>
+        <input type="text" id="scoreCVSS">        
+        </div> 
+        
+        <p style="font-weight: bold;">Kategorija</p>
+                <select  id="Kategorija">
+                    <option value="A01:2021-Broken Access Control">Broken Access Control</option>
+                    <option value="A02:2021-Cryptographic Failures">Cryptographic Failures</option>
+                    <option value="A03:2021-Injection">Injection</option>
+                    <option value="A04:2021-Insecure Design">Insecure Design</option>
+                    <option value="A05:2021-Security Misconfiguration">Security Misconfiguration</option>
+                    <option value="A06:2021-Vulnerable and Outdated Components">Vulnerable and Outdated Components</option>
+                    <option value="A07:2021-Identification and Authentication Failures">Identification and Authentication Failures</option>
+                    <option value="A08:2021-Software and Data Integrity Failures">Software and Data Integrity Failures</option>
+                    <option value="A09:2021-Security Logging and Monitoring Failures">Security Logging and Monitoring Failures</option>
+                    <option value="A10:2021-Server-Side Request Forgery">Server-Side Request Forgery</option>
+                </select>
+    
+    
+                <div class="dugmeNadnu">
+                    <button id="dodajBtn">Dodaj</button>
+                </div>
+    </div>
+
+
+
+
+   <script src="biblioteke/pizzip.min.js" ></script>
+
+   
+  <script src="biblioteke/docxtemplater-latest.min.js"></script>
+
+   
+    <script src="biblioteke/FileSaver.min.js" ></script>
+
+    <script src="javascript/settingData.js"></script>
+    <script>
+        // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("DodavanjeAlata");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    </script>
+
+    
+</body>
+</html>
+
+
